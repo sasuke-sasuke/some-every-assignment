@@ -21,8 +21,8 @@ Examples:
 */
 
 function hasAZero(num) {
-    return Array.from(num).some(function(n){
-        return n === 0;
+    return Array.from(num.toString()).some(function(n){
+        return n === '0';
     })
 }
 
@@ -49,6 +49,11 @@ Examples:
 */
 
 function hasNoDuplicates(arr) {
+    return arr.every(function(num){
+        for(let i = 0; i < arr.length; i++){
+            return arr[i] !== num
+        }
+    })
 }
 
 /*
